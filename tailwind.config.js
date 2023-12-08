@@ -10,7 +10,6 @@ module.exports = {
         hoverred: '#eb6659',
         white: '#ffffff',
         black: '#000000',
-        backgroundgray: 'f4f6f6',
         basecolor: '#212529',
       },
     },
