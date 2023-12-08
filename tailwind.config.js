@@ -11,6 +11,11 @@ module.exports = {
         white: '#ffffff',
         black: '#000000',
         basecolor: '#212529',
+        footerbuttonbg: '#0346c8',
+        fbghover: '#033caa',
+        fiborder: '#dee2e6',
+        fifocus: '#0D6EFD',
+        
       },
     },
   },
