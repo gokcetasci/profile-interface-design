@@ -12,7 +12,7 @@ function Header() {
     return (
         <div className='fixed-top py-0 h-[100px] w-screen bg-white tracking-wide'>
             <div className='mx-[74px] px-3 py-2.5  flex flex-row h-[100px] items-center relative justify-between w-[1320px}'>
-                <a className='mr-8'>
+                <a href='/' className='mr-8'>
                     <img src="https://www.livemedy.com/images/logo.png" alt="Livemedy Logo" className='w-[205px] h-[45px]' />
                 </a>
                 <div className='text-[14px]	font-normal text-basecolor'>
@@ -27,13 +27,13 @@ function Header() {
                         <BiSolidDownArrow className='text-primary ml-[6px]' />
                     </button>
                     {isDropdownOpen && (
-                        <div className='dropdown-content absolute top-full left-2 border rounded-md	py-[5px] min-w-[92px] mt-[2px] z-10 bg-white'>
+                        <div className='dropdown-content absolute top-full left-2 border rounded-md	py-[5px] min-w-[92px] mt-[2px] z-10 bg-white text-[14px] flex flex-col'>
                             {/* Dropdown content goes here */}
-                            <a href="#" className='flex flex-row '>
-                                <img src="https://www.livemedy.com/app/dist/img/flag/Tr.png" alt="" className='h-[33px] mr-4 px-[5px]' />TR
+                            <a href="#" className='flex flex-row items-center'>
+                                <img src="https://www.livemedy.com/app/dist/img/flag/Tr.png" alt="" className='h-[33px] mr-4 pl-[5px]' />TR
                             </a>
-                            <a href="#" className='flex flex-row'>
-                                <img src="https://www.livemedy.com/app/dist/img/flag/EN.png" alt="" className=' h-[33px] mr-4 px-[5px]' />ENG
+                            <a href="#" className='flex flex-row items-center'>
+                                <img src="https://www.livemedy.com/app/dist/img/flag/EN.png" alt="" className=' h-[33px] mr-4 pl-[5px]' />ENG
                             </a>
 
                         </div>
