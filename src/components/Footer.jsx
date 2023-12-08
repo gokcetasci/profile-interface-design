@@ -6,10 +6,10 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
     return (
-        <div className="bg-[#f4f6f6] p-4 fixed bottom-0 left-0 w-full z-50 pt-[49px]">
+        <div className="bg-[#f4f6f6]  fixed bottom-0 left-0 w-full  pt-[49px]">
             <div className='mx-[74px] px-[12px] text-basecolor'>
                 <div className='flex flex-row mb-[50px]'>
-                    <a className='mr-[132px] '>
+                    <a href='/' className='mr-[132px] '>
                         <img src="https://www.livemedy.com/images/logo.png" alt="Livemedy Logo" className='w-[205px] h-[45px]' />
                     </a>
                     <div className='flex justify-center items-center text-[14px] tracking-wide	'>
@@ -52,10 +52,10 @@ function Footer() {
 
                     </form>
                 </div>
-                <div className="container mx-auto">
+                <div className="container mt-[55px] py-[20px] border-t border-solid border-[#d0d3d6] text-[12px]">
                     <div className="flex justify-between items-center">
-                        <p className="text-gray-700">©2020 Livemedy Sağlık Platformu A.Ş. Tüm hakları saklıdı.</p>
-                        <div className="flex space-x-4">
+                        <p className="text-gray-700">©2020 Livemedy Sağlık Platformu A.Ş. Tüm hakları saklıdır.</p>
+                        <div className="flex gap-9 ml-auto">
                             <a href="#" className="text-gray-700 hover:text-blue-500">
                                 Kullanım Koşulları            </a>
                             <a href="#" className="text-gray-700 hover:text-blue-500">
