@@ -10,7 +10,7 @@ function Header() {
     };
 
     return (
-        <div className='fixed-top py-0 h-[100px] w-screen bg-white'>
+        <div className='fixed-top py-0 h-[100px] w-screen bg-white tracking-wide'>
             <div className='mx-[74px] px-3 py-2.5  flex flex-row h-[100px] items-center relative justify-between w-[1320px}'>
                 <a className='mr-8'>
                     <img src="https://www.livemedy.com/images/logo.png" alt="Livemedy Logo" className='w-[205px] h-[45px]' />
