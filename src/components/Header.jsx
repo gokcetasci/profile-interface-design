@@ -10,7 +10,7 @@ function Header() {
     };
 
     return (
-        <div className='fixed-top py-0 h-[100px] w-screen bg-white tracking-wide'>
+        <div className='py-0 h-[100px] w-screen bg-white tracking-wide'>
             <div className='mx-[74px] px-3 py-2.5  flex flex-row h-[100px] items-center relative justify-between w-[1320px}'>
                 <a href='/' className='mr-8'>
                     <img src="https://www.livemedy.com/images/logo.png" alt="Livemedy Logo" className='w-[205px] h-[45px]' />
@@ -33,7 +33,7 @@ function Header() {
                                 <img src="https://www.livemedy.com/app/dist/img/flag/Tr.png" alt="" className='h-[33px] mr-4 pl-[5px]' />TR
                             </a>
                             <a href="#" className='flex flex-row items-center'>
-                                <img src="https://www.livemedy.com/app/dist/img/flag/EN.png" alt="" className=' h-[33px] mr-4 pl-[5px]' />ENG
+                                <img src="https://www.livemedy.com/app/dist/img/flag/EN.png" alt="" className=' h-[33px] mr-4 pl-[5px]' />EN
                             </a>
 
                         </div>
