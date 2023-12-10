@@ -23,7 +23,7 @@ function Header() {
                 <div id='dropdown' className='relative flex flex-row justify-center items-center h-[43px] mx-auto text-basecolor'>
                     <button onClick={toggleDropdown} className='px-4 py-2 flex flex-row  place-items-center '>
                         <img src="https://www.livemedy.com/app/dist/img/flag/Tr.png" alt="" className='w-[33px] h-[33px] mr-3' />
-                        <p className='text-[14px] text-basecolor'>TR</p>
+                        <p className='text-[14px] text-basecolor font-bold'>TR</p>
                         <BiSolidDownArrow className='text-primary ml-[6px]' />
                     </button>
                     {isDropdownOpen && (
