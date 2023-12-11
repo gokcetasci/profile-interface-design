@@ -29,10 +29,10 @@ function Header() {
                     {isDropdownOpen && (
                         <div className='dropdown-content absolute top-full left-2 border rounded-md	py-[5px] min-w-[92px] mt-[2px] z-10 bg-white text-[14px] flex flex-col'>
                             {/* Dropdown content goes here */}
-                            <a href="#" className='flex flex-row items-center'>
+                            <a href="#" className='flex flex-row items-center hover:bg-gray-100/50 font-medium'>
                                 <img src="https://www.livemedy.com/app/dist/img/flag/Tr.png" alt="" className='h-[33px] mr-4 pl-[5px]' />TR
                             </a>
-                            <a href="#" className='flex flex-row items-center'>
+                            <a href="#" className='flex flex-row items-center hover:bg-gray-100/50 font-medium'>
                                 <img src="https://www.livemedy.com/app/dist/img/flag/EN.png" alt="" className=' h-[33px] mr-4 pl-[5px]' />EN
                             </a>
 
