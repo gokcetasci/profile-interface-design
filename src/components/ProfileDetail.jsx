@@ -7,7 +7,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { PiMapPinFill } from "react-icons/pi";
-import { GiWorld, GiZigzagCage } from "react-icons/gi";
+import { GiWorld } from "react-icons/gi";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { FaCamera } from "react-icons/fa";
 import { BiSolidUserRectangle } from "react-icons/bi"
@@ -23,6 +23,8 @@ function ProfileDetail() {
     };
 
     const [selectedTitle, setSelectedTitle] = useState('genel');
+
+
 
     // İçerikleri tutan nesne
     const content = {
@@ -228,11 +230,11 @@ function ProfileDetail() {
                                     </div>
 
                                     <div className='bg-white shadow-[0_.5rem_1rem_rgba(0,0,0,.15)] p-4 text-[12px] rounded-md'>
-                                    <div className='flex flex-row gap-3 grid grid-cols-3'>
-                                        <span>{content[selectedTitle].worktitle}</span>
-                                        <span>{content[selectedTitle].workplace}</span>
-                                        <span className='place-self-end'>{content[selectedTitle].experiencetime}</span>
-                                    </div>
+                                        <div className='flex flex-row gap-3 grid grid-cols-3'>
+                                            <span>{content[selectedTitle].worktitle}</span>
+                                            <span>{content[selectedTitle].workplace}</span>
+                                            <span className='place-self-end'>{content[selectedTitle].experiencetime}</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div></div>
