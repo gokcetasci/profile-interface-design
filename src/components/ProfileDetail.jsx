@@ -12,19 +12,17 @@ import { MdAccountBalanceWallet } from "react-icons/md";
 import { FaCamera } from "react-icons/fa";
 import { BiSolidUserRectangle } from "react-icons/bi"
 import { PiStudentFill } from "react-icons/pi";
+import AppointmentCalendar from './AppointmentCalendar';
 
 function ProfileDetail() {
     const [isShareOpen, setShareOpen] = useState(false);
     const [isGoShareClicked, setGoShareClicked] = useState(false);
+    const [selectedTitle, setSelectedTitle] = useState('genel');
 
     const handleShareClick = () => {
         setShareOpen(!isShareOpen);
         setGoShareClicked(!isGoShareClicked);
     };
-
-    const [selectedTitle, setSelectedTitle] = useState('genel');
-
-
 
     // İçerikleri tutan nesne
     const content = {
@@ -36,7 +34,7 @@ function ProfileDetail() {
                     <p className='mb-2'>Fobiler - Sosyal Kaygi - Özgüven Problemleri - Saglik Kaygisi - Uyku Bozuklugu</p>
                     <p className='mb-2'>Depresyon, Bagimlilik - Stres - Öfke Kontrolü</p>
                     <p className='mb-2'>Obsesif Kompulsif Bozukluk - Ebeveynlik</p>
-                    <p className='mb-2'>İliski Problemleri - Degersizlik - Kendini Tanima</p>
+                    <p>İliski Problemleri - Degersizlik - Kendini Tanima</p>
                 </>
             ),
             universityanddate: (
@@ -166,7 +164,10 @@ function ProfileDetail() {
                     </div>
 
                     <h4 className='text-[26px] text-#353539 mb-2'>Randevu Al</h4>
-
+                    
+                    <div>
+                        <AppointmentCalendar/>
+                    </div>
                 </div>
 
                 <div className='w-full flex flex-col '>
@@ -188,7 +189,7 @@ function ProfileDetail() {
                             <span className='font-medium' >Sosyal</span>
                         </button>
                     </div>
-                    <div className='pt-8'>
+                    <div className='pt-6'>
                         {selectedTitle === 'genel' && (
                             <>
                                 <div className='mb-8 pb-2 '>
