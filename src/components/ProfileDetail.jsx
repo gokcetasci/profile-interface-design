@@ -19,10 +19,39 @@ function ProfileDetail() {
     const [isGoShareClicked, setGoShareClicked] = useState(false);
     const [selectedTitle, setSelectedTitle] = useState('genel');
 
+
     const handleShareClick = () => {
         setShareOpen(!isShareOpen);
         setGoShareClicked(!isGoShareClicked);
     };
+
+    const doctorData = {
+        doctor: {
+            name: (
+                <>
+                    <h3 className='text-[20px] mb-0 leading-[1.4] font-medium'>
+                        Seda <br /> Odabaşı Dinç
+                    </h3>
+                </>
+            ),
+            img: 'https://www.livemedy.com/tr/files/download/950624a9-dd4b-406d-b34e-d52799db33ee',
+            title: 'Uzman, Klinik Psikoloji',
+
+        },
+
+    }
+
+    const city = {
+        name: 'İstanbul'
+    }
+
+    const languages = {
+        first: 'TR'
+    }
+
+    const price = {
+        rateperminute: '8₺/dk'
+    }
 
     // İçerikleri tutan nesne
     const content = {
@@ -90,20 +119,17 @@ function ProfileDetail() {
                 >
                     <div className='mb-[20px] flex flex-row'>
                         <img
-                            data-id='doctor-image'
-                            src='https://www.livemedy.com/tr/files/download/950624a9-dd4b-406d-b34e-d52799db33ee'
+                            src={doctorData.doctor.img}
                             alt='proflie-picture'
                             className='mr-[18px] border border-solid border-[3px] border-[#dee2e6] rounded-[0.5rem] w-[176px] h-[176px]'
                         />
                         <div className='flex flex-col align-self-strecth w-full	'>
-                            <h3 className='text-[20px] mb-0 leading-[1.4] font-medium'>
-                                Seda <br /> Odabaşı Dinç
-                            </h3>
+                            {doctorData.doctor.name}
                             <span
                                 data-id='doctor-title'
                                 className='text-[#757a81] text-[13px] leading-[1.3] mb-[7px]'
                             >
-                                Uzman, Klinik Psikoloji
+                                {doctorData.doctor.title}
                             </span>
                             <div className='flex flex-row w-full items-center gap-[1rem] leading-[1] place-content-end mt-auto relative text-pdicon' >
                                 <a href=''>
@@ -144,29 +170,29 @@ function ProfileDetail() {
                             <strong className='text-[14px] mb-[10px]'>Şehir</strong>
                             <div className='flex flex-row text-[16px] text-pdicon' >
                                 <PiMapPinFill className='mr-[6px]' />
-                                <span className='text-[12px]'>İstanbul</span>
+                                <span className='text-[12px]'>{city.name}</span>
                             </div>
                         </div>
                         <div className='flex flex-col items-center justify-center px-1 py-4 w-1/3 bg-[#AFCAFF] bg-opacity-[.2] '>
                             <strong className='text-[14px] mb-[10px]'>Diller</strong>
                             <div className='flex flex-row text-[16px] text-pdicon' >
                                 <GiWorld className='mr-[6px]' />
-                                <span className='text-[12px]'>TR</span>
+                                <span className='text-[12px]'>{languages.first}</span>
                             </div>
                         </div>
                         <div className='flex flex-col items-center justify-center px-1 py-4 w-1/3 bg-[#AFCAFF] bg-opacity-[.2] rounded-r-lg'>
                             <strong className='text-[14px] mb-[10px]'>Ücret</strong>
                             <div className='flex flex-row text-[16px] text-pdicon' >
                                 <MdAccountBalanceWallet className='mr-[6px]' />
-                                <span className='text-[12px]'>8₺/dk</span>
+                                <span className='text-[12px]'>{price.rateperminute}</span>
                             </div>
                         </div>
                     </div>
 
                     <h4 className='text-[26px] text-#353539 mb-2'>Randevu Al</h4>
-                    
+
                     <div>
-                        <AppointmentCalendar/>
+                        <AppointmentCalendar />
                     </div>
                 </div>
 
