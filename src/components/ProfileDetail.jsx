@@ -53,7 +53,6 @@ function ProfileDetail() {
         rateperminute: '8₺/dk'
     }
 
-    // İçerikleri tutan nesne
     const content = {
         genel: {
             interest: (
@@ -96,8 +95,8 @@ function ProfileDetail() {
             )
         },
         sosyal: (
-            <div className='px-12 my-12'>
-                <div className='flex flex-col items-center justify center'>
+            <div className='px-8 lg:px-12 my-12'>
+                <div className='flex flex-col items-center justify-center'>
                     <FaCamera className='w-[52px] h-[52px] text-gray-400/50 mb-3' />
                     <p className='font-medium text-opacity-[0.75]'>Sağlık profesyoneli henüz paylaşım yapmadı.</p>
                 </div>
@@ -105,23 +104,22 @@ function ProfileDetail() {
         ),
     };
 
-    // Başlık tıklama işlemi
     const handleTitleClick = (title) => {
         setSelectedTitle(title);
     };
 
     return (
         <div className='pt-[30px] pb-[50px] bg-mainbgcolor bg-opacity-[.7] '>
-            <div className='px-3 mx-[74px] flex flex-row gap-[40px]' >
+            <div className='px-3 mx-0 md:mx-[74px] flex  flex-col lg:flex-row gap-[40px] ' >
                 <div
-                    className='align-self-start flex-shrink-0 shadow bg-white border-solid border-[#f8f8f8] rounded-[24px] p-[28px] w-[395px]'
+                    className='align-self-start flex-shrink-0 shadow bg-white border-solid border-[#f8f8f8] rounded-[24px] p-[12px] lg:p-[16px] xs:p-[28px] w-full lg:w-[395px]  '
                     style={{ boxShadow: '0 .5rem 1rem rgba(0,0,0,.15)' }}
                 >
-                    <div className='mb-[20px] flex flex-row'>
+                    <div className='mb-[20px] flex flex-col xs:flex-row'>
                         <img
                             src={doctorData.doctor.img}
                             alt='proflie-picture'
-                            className='mr-[18px] border border-solid border-[3px] border-[#dee2e6] rounded-[0.5rem] w-[176px] h-[176px]'
+                            className='mr-[18px] border border-solid border-[3px] border-[#dee2e6] rounded-[0.5rem] w-full xs:w-[176px] h-auto xs:h-[176px] mb-[18px] xs:mb-0'
                         />
                         <div className='flex flex-col align-self-strecth w-full	'>
                             {doctorData.doctor.name}
@@ -189,7 +187,7 @@ function ProfileDetail() {
                         </div>
                     </div>
 
-                    <h4 className='text-[26px] text-#353539 mb-2'>Randevu Al</h4>
+                    <h4 className='text-[18px] lg:text-[26px] text-#353539 mb-2 font-medium'>Randevu Al</h4>
 
                     <div>
                         <AppointmentCalendar />
@@ -267,7 +265,7 @@ function ProfileDetail() {
                                 <div></div>
                             </>
                         )}
-                        {selectedTitle === 'sosyal' && <p>{content[selectedTitle]}</p>}
+                        {selectedTitle === 'sosyal' && content[selectedTitle]}
                     </div>
                 </div>
 
