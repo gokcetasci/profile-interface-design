@@ -28,7 +28,7 @@ function Header() {
 
 
     return (
-        <div className='py-0 h-auto w-screen bg-white tracking-wide '>
+        <div className='py-0 h-auto w-screen bg-white tracking-wide sticky top-0 z-10'>
             <div className='mx-auto md:mx-[74px] px-3 py-2.5  flex flex-row h-[60px] lg:h-[100px] items-center relative justify-between w-[1320px}'>
                 <a href='/' className='mr-8'>
                     <img src="https://www.livemedy.com/images/logo.png" alt="Livemedy Logo" className='w-[120px] md:w-[205px] h-[25px] md:h-[45px]' />
