@@ -134,7 +134,7 @@ function AppointmentCalendar() {
 
 
   const Appoinmentalert = ({ onClose }) => (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
+    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-20">
       <div className="bg-white px-[30px] py-[40px] rounded-2xl max-w-[380px] relative shadow-xl">
         <div className='border-b mb-[20px] flex items-center justify-center'>
           <h1 className='font-bold text-[19px] pb-[20px]'>Online Randevu Özeti</h1>
