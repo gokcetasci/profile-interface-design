@@ -10,7 +10,7 @@ You can access the live preview of the project [here.] []
 
 ## Açıklama
 
-- **Header:**
+- **Header**
     - There are features such as drop-down menu, hamburger menu and some icons.
 
 - **Project Details**
