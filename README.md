@@ -25,7 +25,7 @@ You can access the live preview of the project [here.] []
 - **Footer**
     - This section is the footer of the site. There are features here such as social media icons and a form submission structure.
 
-# Project Note
+## Project Note
 
 This project is just a copy. The site has been made more dynamic with some popups. However, most buttons are non-functional and only have styling. Most of the data was entered as fake data.
 
