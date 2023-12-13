@@ -27,7 +27,7 @@ function App() {
         <Header />
         <ProfileDetail />
         <Footer />
-        <div className={`fixed bottom-24 right-7`}>
+        <div className={`fixed bottom-24 right-7 z-40`}>
           {intercomState.isIntercomOpen && <Intercom onClose={handleIntercomToggle} />}
           <button
             onClick={handleIntercomToggle}
