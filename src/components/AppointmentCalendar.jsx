@@ -91,11 +91,34 @@ function AppointmentCalendar() {
     setCloseHovered(false);
   };
 
+  const doctorData = {
+    doctor: {
+        name: (
+            <>
+                <p className='text-[18px] font-medium'>
+                    Seda Odabaşı Dinç
+                </p>
+            </>
+        ),
+        img: 'https://www.livemedy.com/tr/files/download/950624a9-dd4b-406d-b34e-d52799db33ee',
+        title: 'Uzman, Klinik Psikoloji',
+
+    },
+
+}
+
   const Appoinmentalert = ({ onClose }) => (
     <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
       <div className="bg-white px-[30px] py-[40px] rounded-2xl max-w-[380px] relative shadow-xl">
         <div className='border-b mb-[20px] flex items-center justify-center'>
           <h1 className='font-bold text-[19px] pb-[20px]'>Online Randevu Özeti</h1>
+        </div>
+        <div className='flex flex-row'>
+          <img src={doctorData.doctor.img} alt="" className='w-[50px] h-[50px] rounded-lg'/>
+          <div className='flex flex-col ml-[20px]'>
+            {doctorData.doctor.name}
+            <p className='text-[16px] text-gray-600'>{doctorData.doctor.title}</p>
+          </div>
         </div>
         <div className='flex flex-col  my-[30px] pb-[30px] border-b'>
           <div className='flex flex-row items-center '>
