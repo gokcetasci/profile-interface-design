@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Profile Interface Design - TASK PROJECT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple copy of the profile page of the site 'Livemedy'. Here, users can view the CV of a selected doctor and make an appointment on the appropriate dates and times specified. In this project; React is used in the front end.
 
-## Available Scripts
+You can access the profile page I copied [here.] [https://www.livemedy.com/tr/doctorlists/detail/f8f99f3f-40a8-466a-8a4b-0314d36590f5/seda-odabaşı-dinç#]
 
-In the project directory, you can run:
+# Live Preview
 
-### `npm start`
+You can access the live preview of the project [here.] []
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Açıklama
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Header:**
+    - There are features such as drop-down menu, hamburger menu and some icons.
 
-### `npm test`
+- **Project Details**
+    - This section contains information such as the CV of the person whose profile is displayed, available dates and times for appointments, and the person's name and surname.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Appointment Calendar** 
+    - In this section, the date design (https://bulutklinik.com/cildiye) is made according to the date structure here. There is also a popup structure that provides appointment summary information and a confirmation option for the user when a time is selected.
 
-### `npm run build`
+- **Intercom**
+    - A messaging structure has been created here that helps users communicate with site employees.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Footer**
+    - This section is the footer of the site. There are features here such as social media icons and a form submission structure.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Project Note
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is just a copy. The site has been made more dynamic with some popups. However, most buttons are non-functional and only have styling. Most of the data was entered as fake data.
 
-### `npm run eject`
+## Packages Used and Versions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **react**: "^18.2.0",
+- **react-icons**: ^4.12.0
+- **react-icon**: "^4.12.0",
+- **react-scripts**: ^5.0.1
+- **react-bootstrap**: "^2.9.1",
+- **postcss**: "^8.4.32",
+- **tailwindcss**: "^3.3.6"
+- **react-router-dom**: "^6.20.1",
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Git clone: `git clone https://github.com/gokcetasci/profile-interface-design.git`
+2. Go to the project directory: `cd adiniz`
+3. Install dependencies: `npm install`
+4. Once the project dependencies are installed, you can start the project using the `npm start` command.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
