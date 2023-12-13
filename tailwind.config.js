@@ -1,3 +1,6 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -18,6 +21,11 @@ module.exports = {
         fifocus: '#0D6EFD',
         pdicon: '#0f2557'
       },
+    },
+    screens: {
+      'xs': '379px',
+      ...defaultTheme.screens,
+
     },
   },
   plugins: [],
