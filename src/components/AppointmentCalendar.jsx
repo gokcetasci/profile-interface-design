@@ -7,6 +7,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { IoRemoveOutline } from "react-icons/io5";
 
+//randevu saati için verileri burada gösterdim isteğe göre değiştirebiliriz
 const appointmentTimes = {
   'Pzt': ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30'],
   'Sal': ['09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30'],
@@ -18,7 +19,7 @@ const appointmentTimes = {
 };
 
 function AppointmentCalendar() {
-  const startDate = new Date(2023, 11, 12);
+  const startDate = new Date(2023, 11, 12); //randevu takvimindeki tarih aralığı
   const endDate = new Date(2023, 11, 31);
   const dateArray = [];
   const currentDate = new Date(startDate);
@@ -32,7 +33,30 @@ function AppointmentCalendar() {
   const [showAllHours, setShowAllHours] = useState(false); // 
   const [selectedDateTime, setSelectedDateTime] = useState(null);
 
-  const displayedDates = dateArray.slice(displayStartDate, displayStartDate + 4);
+  const displayedDates = dateArray.slice(displayStartDate, displayStartDate + 4); //görüntülenen tarih aralığını
+  
+  function getMonthName(month) {
+    const monthNames = [
+      'Oca',
+      'Şub',
+      'Mar',
+      'Nis',
+      'May',
+      'Haz',
+      'Tem',
+      'Ağu',
+      'Eyl',
+      'Eki',
+      'Kas',
+      'Ara',
+    ];
+    return monthNames[month];
+  }
+  
+  function getDayAbbreviation(date) {
+    const dayNames = ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Pzr'];
+    return dayNames[date.getDay()];
+  }
 
   const dateElements = (
     <div className="flex flex-row gap-2 xs:gap-5">
@@ -47,7 +71,7 @@ function AppointmentCalendar() {
                   {time}
                 </span>
               ))
-              : appointmentTimes[getDayAbbreviation(date)].slice(0, 4).map((time, timeIndex) => (
+              : appointmentTimes[getDayAbbreviation(date)].slice(0, 4).map((time, timeIndex) => ( //ilk 4 saati gösterme 
                 <span key={timeIndex} className="text-[12px] bg-red-100 text-primary font-bold p-2 mb-2 rounded-lg hover:bg-primary hover:text-white transition duration-300 ease-in-out" onClick={() => handleTimeSlotClick(date, time)}>
                   {time}
                 </span>
@@ -58,29 +82,31 @@ function AppointmentCalendar() {
     </div>
   );
 
-  const showPreviousDates = () => {
+
+
+  const showPreviousDates = () => {    //önceki tarihler
     if (displayStartDate > 0) {
       setDisplayStartDate(displayStartDate - 1);
     }
   };
 
   const showNextDates = () => {
-    if (displayStartDate + 4 < dateArray.length) {
+    if (displayStartDate + 4 < dateArray.length) { //sonraki tarihler
       setDisplayStartDate(displayStartDate + 1);
     }
   };
 
-  const toggleShowAllHours = () => {
+  const toggleShowAllHours = () => { //bu kısım (daha fazla göster/daha az göster butonu için)
     setShowAllHours(!showAllHours);
   };
 
-  const handleTimeSlotClick = (date, time) => {
-    const selectedDate = new Date(date);
+  const handleTimeSlotClick = (date, time) => {   // saate tıklama
+    const selectedDate = new Date(date);  
     const selectedDateTime = new Date(selectedDate.setHours(time.split(':')[0], time.split(':')[1]));
     setSelectedDateTime(selectedDateTime);
   };
 
-  const [isCloseHovered, setCloseHovered] = useState(false);
+  const [isCloseHovered, setCloseHovered] = useState(false); //appoinment alert için
 
   const handleMouseEnter = () => {
     setCloseHovered(true);
@@ -90,7 +116,7 @@ function AppointmentCalendar() {
     setCloseHovered(false);
   };
 
-  const doctorData = {
+  const doctorData = {  
     doctor: {
         name: (
             <>
@@ -101,10 +127,11 @@ function AppointmentCalendar() {
         ),
         img: 'https://www.livemedy.com/tr/files/download/950624a9-dd4b-406d-b34e-d52799db33ee',
         title: 'Uzman, Klinik Psikoloji',
-
     },
+};
 
-}
+
+
 
   const Appoinmentalert = ({ onClose }) => (
     <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
@@ -178,27 +205,5 @@ function AppointmentCalendar() {
   );
 }
 
-function getMonthName(month) {
-  const monthNames = [
-    'Oca',
-    'Şub',
-    'Mar',
-    'Nis',
-    'May',
-    'Haz',
-    'Tem',
-    'Ağu',
-    'Eyl',
-    'Eki',
-    'Kas',
-    'Ara',
-  ];
-  return monthNames[month];
-}
-
-function getDayAbbreviation(date) {
-  const dayNames = ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Pzr'];
-  return dayNames[date.getDay()];
-}
 
 export default AppointmentCalendar;
