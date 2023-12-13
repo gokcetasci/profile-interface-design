@@ -15,7 +15,6 @@ const appointmentTimes = {
   'Cum': ['11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30'],
   'Cmt': [],
   'Pzr': [],
-  // You can customize the hours as needed
 };
 
 function AppointmentCalendar() {
@@ -30,13 +29,13 @@ function AppointmentCalendar() {
   }
 
   const [displayStartDate, setDisplayStartDate] = useState(0);
-  const [showAllHours, setShowAllHours] = useState(false); // Added state for showing all hours
+  const [showAllHours, setShowAllHours] = useState(false); // 
   const [selectedDateTime, setSelectedDateTime] = useState(null);
 
   const displayedDates = dateArray.slice(displayStartDate, displayStartDate + 4);
 
   const dateElements = (
-    <div className="flex flex-row gap-5">
+    <div className="flex flex-row gap-2 xs:gap-5">
       {displayedDates.map((date, index) => (
         <div key={index} className="flex flex-col items-center">
           <span className='font-bold text-[16px]'>{getDayAbbreviation(date)}</span>
@@ -158,8 +157,8 @@ function AppointmentCalendar() {
   );
 
   return (
-    <div className='mt-6'>
-      <div className="flex flex-row justify-between ">
+    <div className='mt-6 '>
+      <div className="flex flex-row justify-evenly lg:justify-between ">
         <IoMdArrowDropleft onClick={showPreviousDates} className='text-primary w-6 h-6 mt-2 rounded-full bg-red-100/50 hover:bg-primary hover:text-white transition duration-300 ease-in-out' />
         {dateElements}
         <IoMdArrowDropright onClick={showNextDates} className='text-primary w-6 h-6 mt-2 rounded-full bg-red-100/50 hover:bg-primary hover:text-white transition duration-300 ease-in-outs' />
@@ -171,7 +170,7 @@ function AppointmentCalendar() {
         </button>
       </div>
       <div className='flex justify-end mt-8'>
-        <button type='button' className='rounded-md text-white bg-footerbuttonbg hover:bg-fbghover w-[110px] px-3 py-1.5 h-[37.6px] w-1/2'>
+        <button type='button' className='rounded-md text-white bg-footerbuttonbg hover:bg-fbghover px-3 py-1.5 h-[37.6px] w-1/2'>
           Randevu
         </button>
       </div>
