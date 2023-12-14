@@ -6,9 +6,9 @@ You can access the profile page I copied [here.] [https://www.livemedy.com/tr/do
 
 # Live Preview
 
-You can access the live preview of the project [here.] []
+You can access the live preview of the project [here.] [https://profile-interface-design.vercel.app]
 
-## Açıklama
+## Explanation
 
 - **Header**
     - There are features such as drop-down menu, hamburger menu and some icons.
