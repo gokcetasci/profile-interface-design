@@ -32,7 +32,6 @@ This project is just a copy. The site has been made more dynamic with some popup
 ## Packages Used and Versions
 
 - **react**: "^18.2.0",
-- **react-icons**: ^4.12.0
 - **react-icon**: "^4.12.0",
 - **react-scripts**: ^5.0.1
 - **react-bootstrap**: "^2.9.1",
