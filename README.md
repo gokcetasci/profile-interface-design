@@ -42,7 +42,7 @@ This project is just a copy. The site has been made more dynamic with some popup
 ## Getting Started
 
 1. Git clone: `git clone https://github.com/gokcetasci/profile-interface-design.git`
-2. Go to the project directory: `cd adiniz`
+2. Go to the project directory: `cd projectname`
 3. Install dependencies: `npm install`
 4. Once the project dependencies are installed, you can start the project using the `npm start` command.
 
